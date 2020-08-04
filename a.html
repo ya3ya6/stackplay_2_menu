@@ -1,0 +1,21 @@
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<div ng-app="myApp">
+  <menu-directive></menu-directive>
+</div>
+<script>
+  var app = angular.module("myApp", []);
+
+  app.controller("ctrl", ctrl);
+  function ctrl($scope, $filter) {
+    loadReact();
+  }
+
+  app.directive("menuDirective", function() {
+    return {
+      template: "<div><h1>I am angular!</h1><div id='root'></div></div>",
+      controller: "ctrl"
+    };
+  });
+</script>
+
+<script src="script.js"></script>
