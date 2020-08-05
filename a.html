@@ -7,7 +7,7 @@
 
   app.controller("ctrl", ctrl);
   function ctrl($scope, $filter) {
-    loadReact();
+    loadReact((menuId) => {alert("clicked on " + menuId)});
   }
 
   app.directive("menuDirective", function() {
